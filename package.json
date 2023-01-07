@@ -1,0 +1,16 @@
+{
+  "name": "discordlog",
+  "version": "1.0.0",
+  "description": "send message on discord channel for log with API call",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.7.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  }
+}
