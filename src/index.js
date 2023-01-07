@@ -3,10 +3,7 @@ const Discord = require('discord.js');
 require('dotenv').config();
 
 const app = express();
-const client = new Discord.Client({
-    intents: Discord.Intents.ALL
-});
-
+const client = new Discord.Client({ intents: [Discord.GatewayIntentBits.Guilds] });
 client.login(process.env.DISCORD_BOT_TOKEN);
 
 app.post('/log/:type', (req, res) => {
