@@ -21,7 +21,8 @@ app.post('/log/:type', (req, res) => {
     });
 });
 
+const host = process.env.API_HOST;
 const port = process.env.API_PORT;
-app.listen(port, () => {
-    console.log(`API launch at ${port}`);
+app.listen(port, host, () => {
+    console.log(`Relay server started at http://${host}:${port}`);
 });
