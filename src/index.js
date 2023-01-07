@@ -3,7 +3,9 @@ const Discord = require('discord.js');
 require('dotenv').config();
 
 const app = express();
-const client = new Discord.Client();
+const client = new Discord.Client({
+    intents: Discord.Intents.ALL
+});
 
 client.login(process.env.DISCORD_BOT_TOKEN);
 
